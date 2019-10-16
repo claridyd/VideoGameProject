@@ -1,0 +1,1 @@
+web: gunicorn VideoGames.app:app
