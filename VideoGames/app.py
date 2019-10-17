@@ -6,7 +6,7 @@ import tablib
 import os
 import pandas as pd
 ######Added by Claridy
-# from config import password
+from config import password
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
