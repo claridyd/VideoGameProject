@@ -6,7 +6,7 @@ import tablib
 import os
 import pandas as pd
 ######Added by Claridy
-from config import password
+# from config import password
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -20,7 +20,8 @@ app = Flask(__name__)
 # Claridy 10/14/19
 ###########################################
 
-DB_URL = 'postgresql+psycopg2://postgres:'+ password + '@localhost:5432/videogames_db'
+# DB_URL = 'postgresql+psycopg2://postgres:'+ password + '@localhost:5432/videogames_db'
+DB_URL = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 db = SQLAlchemy(app)
 
